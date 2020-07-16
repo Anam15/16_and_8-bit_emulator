@@ -1,7 +1,7 @@
 # 16 & and 8-Bit Emulator
 
 Note: Numbers can be added and subrtacted in two ways in assembly. First method is called regsister addressing mode and the second methood is immediate addressing mode.
-This emulator allows the user to: </br>
+This emulator allows the user to: </br> </br>
 	1) Move constants and immediates to 8 and 16-bit registers </br>
 	2) Add 16-bit register to 16-bit register </br>
 	3) Add constant to 16-bit register </br>
@@ -19,7 +19,7 @@ This emulator allows the user to: </br>
 	15) LOOPS </br>
 	16) PUSH and POP numbers to a stack </br>
 	17) MULTIPLY and DIVIDE for register to register </br>
-	18) INCREMENT AND DECREMENT a number </br>
+	18) INCREMENT AND DECREMENT a number </br> </br>
 Note: ZERO FLAG, CARRY FLAG, and SIGN FLAG are also added to the code to ensure that the programs is giving the user the correct output </br> </br>
  
 ### Prerequisites </br>
