@@ -93,7 +93,7 @@ p1e2.asm
      38	0134  CD 20			 int 20h
      39				     ; CODE END
      40	0136			     code ends
-     41				     end start  </br>
+     41				     end start  
 
 At the end of this code, AX = 10, CX = 1, DX = 0, BX = 0, SP = 65534, BP = 0, SI = 0, DI = 65526, CF = 1, SF = 1, ZF = 0 
 To get my output, comment out line 1238 to 1249, and run the proj.cpp file, you should see these values printed in terminal. </br> </br>
