@@ -1,0 +1,42 @@
+Turbo Assembler	 Version 2.5	    03/31/20 23:18:26	    Page 1
+movsub.asm
+
+
+
+      1				     assume cs:code,ds:code
+      2	0000			     code segment
+      3					  org 100h
+      4	0100			     start:
+      5				     ; CODE BEGIN
+      6	0100  B8 0005			      mov AX,5
+      7	0103  B9 0003			      mov CX,3
+      8	0106  BA 0002			      mov DX, 2
+      9	0109  2D 0001			      sub AX,1
+     10	010C  83 E9 02			      sub CX,2
+     11	010F  83 EA 01			      sub DX,1
+     12	0112  CD 20			  int 20h
+     13				     ; CODE END
+     14	0114			     code ends
+     15					  end start
+Turbo Assembler	 Version 2.5	    03/31/20 23:18:26	    Page 2
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??DATE				  Text	 "03/31/20"
+??FILENAME			  Text	 "movsub  "
+??TIME				  Text	 "23:18:26"
+??VERSION			  Number 0205
+@CPU				  Text	 0101H
+@CURSEG				  Text	 CODE
+@FILENAME			  Text	 MOVSUB
+@WORDSIZE			  Text	 2
+START				  Near	 CODE:0100
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+CODE				  16  0114 Para	  none
+

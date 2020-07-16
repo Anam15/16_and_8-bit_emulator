@@ -1,0 +1,52 @@
+Turbo Assembler	 Version 2.5	    05/13/20 03:10:37	    Page 1
+proj1ex.asm
+
+
+
+      1				     assume cs:code,ds:code
+      2	0000			     code segment
+      3					  org 100h
+      4	0100			     start:
+      5				     ; CODE BEGIN
+      6	0100  B8 FFFF			     mov ax,0FFFFh
+      7	0103  05 0002			     add ax, 2
+      8	0106  50			     push ax
+      9	0107  5F			     pop di	    ; di has a value of	1
+     10	0108  03 FF			     add di,di	    ; di has a value of	2
+     11	010A  8B CF			     mov cx,di	    ; cx = 2
+     12	010C  41			     inc cx	    ; cx is 3
+     13	010D  2B F9			     sub di, cx	    ; di is FF
+     14	010F  4F			     dec di	    ; di is FE
+     15	0110				 L1:
+     16	0110  33 FF			     xor di, di	    ; di is 0
+     17	0112  33 F8			     xor di, ax	    ; di is 1
+     18	0114  57			     push di
+     19	0115  83 CF 02			     or	di, 2	    ; di is 2
+     20	0118  E2 F6			     LOOP L1
+     21	011A  CD 20			  int 20h
+     22				     ; CODE END
+     23	011C			     code ends
+     24				     end start
+Turbo Assembler	 Version 2.5	    05/13/20 03:10:37	    Page 2
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??DATE				  Text	 "05/13/20"
+??FILENAME			  Text	 "proj1ex "
+??TIME				  Text	 "03:10:37"
+??VERSION			  Number 0205
+@CPU				  Text	 0101H
+@CURSEG				  Text	 CODE
+@FILENAME			  Text	 PROJ1EX
+@WORDSIZE			  Text	 2
+L1				  Near	 CODE:0110
+START				  Near	 CODE:0100
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+CODE				  16  011C Para	  none
+
